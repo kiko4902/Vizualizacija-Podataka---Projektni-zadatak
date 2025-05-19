@@ -23,8 +23,8 @@ svg.call(zoom);
 const tooltip = d3.select("#tooltip");
 
 Promise.all([
-    d3.json("/map/world_med.geojson"),
-    d3.csv("/data/co2_emissions_filtered.csv", d3.autoType)
+    d3.json("./map/world_med.geojson"),
+    d3.csv("./data/co2_emissions_filtered.csv", d3.autoType)
 ]).then(([geojson, csv]) => {
     worldGeoJSON = geojson;
     co2Data = csv;
